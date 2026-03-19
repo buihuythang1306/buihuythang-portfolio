@@ -18,7 +18,7 @@ function App() {
         <div>
           <h1>Get started Bùi Huy Thắng 2</h1>
           <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+            Edit <code>src/App.jsx</code> and save to testb <code>HMR</code>
           </p>
         </div>
         <button
