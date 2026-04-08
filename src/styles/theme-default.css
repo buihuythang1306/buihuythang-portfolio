@@ -1,0 +1,214 @@
+/* src\styles\theme-default.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* =========================================================================================
+                                      VARIABLE CSS (ASA CALM PROFESSIONAL)
+   ========================================================================================= */
+/*LIGHT MODE (ASA DEFAULT)*/
+:root {
+  /* FONT & SIZE CHUNG */
+  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-size-base: 16px;
+  --font-size-title: 2rem;
+  --font-size-subtitle: 1.5rem;
+  --font-size-small: 0.875rem;
+  --font-size-caption: 0.75rem;
+  /* MÀU CHỦ ĐẠO ASA - THEO LOGO */
+  --brand-primary: #1E3888;        /* Xanh navy đậm ASA */
+  --brand-secondary: #1086CD;     /* Xanh dương sáng ASA */
+  --brand-accent: #F8AC00;         /* Vàng cam ASA */
+  /* BACKGROUND & TEXT */
+  --bg-default: #ffffff;
+  --bg-body: #F5F7FA;
+  --bg-surface: #c8ddec;
+  --text-default: #000000;
+  --text-main: #1E293B;
+  --text-muted: #64748B;
+  --border-color: #E2E8F0;
+  --scrollbar-track: #F1F5F9;
+  --scrollbar-thumb: #CBD5E1;
+  --scrollbar-thumb-hover: #94A3B8;
+  --section-bg-soft-start: #ffffff;
+  --section-bg-soft-middle: #F0F5FB;
+  --section-bg-soft-end: #ffffff;
+  --text-header: #1E3888;
+  --text-header-hover: #1086CD;
+  --text-header-active: #ffffff;
+  --text-inverse: #ffffff;
+  --bg-header-hover: rgba(16, 8, 205, 0.1);
+  --bg-header: rgba(255, 255, 255, 1);
+  --bg-header-scrolled: rgba(255, 255, 255, 0.65);
+  /* CARD */
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.06);
+  --card-shadow-hover: rgba(0, 0, 0, 0.12);
+  /* GRADIENT – ASA LOGO */
+  --gradient-brand-strong-start: #1E3888;
+  --gradient-brand-strong-end: #1086CD;
+  --gradient-accent-strong-start: #F8AC00;
+  --gradient-accent-strong-end: #FFD100;
+  --gradient-brand-soft-start: #1E3888;
+  --gradient-brand-soft-end: #F8AC00;
+  --gradient-accent-soft-start: #FFD100;
+  --gradient-accent-soft-end: #F8AC00;
+  --gradient-logo-start: #1E3888;
+  --gradient-logo-middle: #F8AC00;
+  --gradient-logo-end: #1E3888;
+}
+/*DARK MODE (ASA CALM)*/
+.dark {
+  --bg-default: #0F172A;
+  --bg-body: #111827;
+  --bg-surface: #1E293B;
+  --text-default: #FFFFFF;
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+  --border-color: #334155;
+  --scrollbar-track: #1E293B;
+  --scrollbar-thumb: #475569;
+  --scrollbar-thumb-hover: #64748B;
+  --section-bg-soft-start: #0F172A;
+  --section-bg-soft-middle: #1E293B;
+  --section-bg-soft-end: #0F172A;
+  --text-header: #1086CD;
+  --text-header-hover: #5A9FFF;
+  --text-header-active: #0F172A;
+  --bg-header-hover: rgba(16, 134, 205, 0.1);
+  --bg-header: rgba(30, 41, 59, 0.75);
+  --bg-header-scrolled: rgba(30, 41, 59, 0.65);
+  /* MÀU ASA TRONG DARK MODE - THEO LOGO */
+  --brand-primary: #1086CD;
+  --brand-secondary: #5A9FFF;
+  --brand-accent: #FFD100;
+  /* CARD */
+  --card-bg: #1E293B;
+  --card-shadow: rgba(0, 0, 0, 0.25);
+  --card-shadow-hover: rgba(0, 0, 0, 0.45);
+  /* GRADIENT - ASA LOGO DARK */
+  --gradient-brand-strong-start: #1E3888;
+  --gradient-brand-strong-end: #1086CD;
+  --gradient-accent-strong-start: #F8AC00;
+  --gradient-accent-strong-end: #FFD100;
+  --gradient-brand-soft-start: #1086CD;
+  --gradient-brand-soft-end: #FFD100;
+  --gradient-accent-soft-start: #FFD100;
+  --gradient-accent-soft-end: #F8AC00;
+  --gradient-logo-start: #1E3888;
+  --gradient-logo-middle: #F8AC00;
+  --gradient-logo-end: #1E3888;
+}
+/* =========================================================================================
+                                              CLASS CSS CHUNG CHO ALL PAGES
+   ========================================================================================= */
+* {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+html {
+    background-color: var(--bg-default);
+    color: var(--text-default);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+#root {
+    height: 100%;
+}
+/*Thanh cuộn*/
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}
+::-webkit-scrollbar-button {
+    display: none;
+}
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  
+  /* Mask để tạo hình dạng từ SVG */
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+.icon-muted {
+  background-color: var(--text-muted);
+}
+button {
+  display: inline-flex !important;
+  gap: 0.5rem; 
+  line-height: 1; 
+}
+
+/* Đảm bảo icon không bị offset */
+button .icon {
+  position: relative;
+  top: 0;
+  vertical-align: middle;
+  flex-shrink: 0; 
+}
+
+/* =========================================================================================
+                                      ICON STYLES
+   ========================================================================================= */
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
+}
+
+.icon-size-14 {
+  width: 14px;
+  height: 14px;
+}
+
+.icon-size-16 {
+  width: 16px;
+  height: 16px;
+}
+
+.icon-size-20 {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-size-24 {
+  width: 24px;
+  height: 24px;
+}

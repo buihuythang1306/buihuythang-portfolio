@@ -1,0 +1,76 @@
+{
+  "common": {
+    "home": "Trang chủ",
+    "portfolio": "Portfolio",
+    "demo": "Demo",
+    "info": "Thông tin",
+    "welcome": "Chào mừng",
+    "language": "Ngôn ngữ",
+    "theme": "Giao diện",
+    "light": "Sáng",
+    "dark": "Tối",
+    "vietnamese": "Tiếng Việt",
+    "english": "Tiếng Anh"
+  },
+  "portfolio": {
+    "name": "Bùi Huy Thắng",
+    "title": "Full Stack Developer",
+    "description": "Đam mê xây dựng các ứng dụng web có khả năng mở rộng với công nghệ hiện đại. Có kinh nghiệm phát triển cả frontend và backend với trọng tâm là kiến trúc sạch và trải nghiệm người dùng.",
+    "contactMe": "Liên hệ với tôi",
+    "viewGithub": "Xem GitHub",
+    "sections": {
+      "skills": "Kỹ năng Công nghệ",
+      "experience": "Kinh nghiệm Làm việc",
+      "projects": "Dự án Cá nhân",
+      "education": "Học vấn & Thành tích"
+    },
+    "skills": {
+      "programmingLanguages": "Ngôn ngữ Lập trình",
+      "webFrameworks": "Web Frameworks",
+      "databases": "Cơ sở Dữ liệu",
+      "tools": "Công cụ",
+      "architecturePatterns": "Kiến trúc & Mẫu thiết kế",
+      "libraries": "Thư viện"
+    },
+    "experience": {
+      "position": "Vị trí",
+      "team": "Nhóm",
+      "role": "Vai trò",
+      "keyProject": "Dự án Chính",
+      "frontend": "Frontend",
+      "backend": "Backend"
+    },
+    "projects": {
+      "technologyStack": "Công nghệ Sử dụng",
+      "keyFeatures": "Tính năng Chính",
+      "viewCode": "Xem Code"
+    },
+    "education": {
+      "education": "Học vấn",
+      "certifications": "Chứng chỉ",
+      "honorsAwards": "Danh hiệu & Giải thưởng",
+      "gpa": "GPA",
+      "graduated": "Tốt nghiệp năm 2025"
+    }
+  },
+  "demo": {
+    "title": "Trang Demo",
+    "description": "Template React hoàn chỉnh với React Hook Form, Yup validation, và nuqs URL state management",
+    "content": "Khám phá tính năng",
+    "consultation": {
+      "title": "Đăng ký tư vấn miễn phí",
+      "description": "Nhận tư vấn chuyên nghiệp từ đội ngũ chuyên gia của chúng tôi",
+      "button": "Đăng ký tư vấn miễn phí"
+    }
+  },
+  "info": {
+    "title": "Thông tin",
+    "description": "Trang demo các tính năng của template: form validation, URL state, và theme switching",
+    "content": "Thực hiện hành động"
+  },
+  "error": {
+    "notFound": "Không tìm thấy trang",
+    "goHome": "Về trang chủ",
+    "somethingWrong": "Có lỗi xảy ra"
+  }
+}

@@ -1,0 +1,132 @@
+.main-layout {
+  min-height: 100vh;
+  background-color: var(--bg-body);
+}
+
+.main-header {
+  background-color: var(--bg-header);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 1px 3px 0 var(--card-shadow);
+  backdrop-filter: blur(10px);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+.header-left {
+  flex: 1;
+}
+
+.header-title {
+  font-size: var(--font-size-subtitle);
+  font-weight: 700;
+  color: var(--text-header);
+  margin: 0;
+}
+
+.header-nav {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  color: var(--text-header);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--text-header-hover);
+  background-color: var(--bg-header-hover);
+}
+
+.nav-link-active {
+  color: var(--text-header-active) !important;
+  background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary)) !important;
+  box-shadow: 0 2px 8px var(--card-shadow);
+}
+
+.nav-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: currentColor;
+}
+
+.header-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.control-icon {
+  width: 1rem;
+  height: 1rem;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: currentColor;
+}
+
+.language-selector {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .header-left,
+  .header-nav,
+  .header-right {
+    flex: none;
+  }
+  
+  .header-nav {
+    order: 2;
+  }
+  
+  .header-right {
+    order: 1;
+  }
+}

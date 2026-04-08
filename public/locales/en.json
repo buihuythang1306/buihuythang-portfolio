@@ -1,0 +1,76 @@
+{
+  "common": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "demo": "Demo",
+    "info": "Info",
+    "welcome": "Welcome",
+    "language": "Language",
+    "theme": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "vietnamese": "Vietnamese",
+    "english": "English"
+  },
+  "portfolio": {
+    "name": "Bui Huy Thang",
+    "title": "Full Stack Developer",
+    "description": "Passionate about building scalable web applications with modern technologies. Experienced in both frontend and backend development with a focus on clean architecture and user experience.",
+    "contactMe": "Contact Me",
+    "viewGithub": "View GitHub",
+    "sections": {
+      "skills": "Technical Skills",
+      "experience": "Work Experience",
+      "projects": "Personal Projects",
+      "education": "Education & Achievements"
+    },
+    "skills": {
+      "programmingLanguages": "Programming Languages",
+      "webFrameworks": "Web Frameworks",
+      "databases": "Databases",
+      "tools": "Tools",
+      "architecturePatterns": "Architecture & Patterns",
+      "libraries": "Libraries"
+    },
+    "experience": {
+      "position": "Position",
+      "team": "Team",
+      "role": "Role",
+      "keyProject": "Key Project",
+      "frontend": "Frontend",
+      "backend": "Backend"
+    },
+    "projects": {
+      "technologyStack": "Technology Stack",
+      "keyFeatures": "Key Features",
+      "viewCode": "View Code"
+    },
+    "education": {
+      "education": "Education",
+      "certifications": "Certifications",
+      "honorsAwards": "Honors & Awards",
+      "gpa": "GPA",
+      "graduated": "Graduated in 2025"
+    }
+  },
+  "demo": {
+    "title": "Demo Page",
+    "description": "Complete React template with React Hook Form, Yup validation, and nuqs URL state management",
+    "content": "Explore Features",
+    "consultation": {
+      "title": "Free Consultation Registration",
+      "description": "Get professional consultation from our expert team",
+      "button": "Register for Free Consultation"
+    }
+  },
+  "info": {
+    "title": "Info",
+    "description": "Demo page showcasing template features: form validation, URL state, and theme switching",
+    "content": "Perform Action"
+  },
+  "error": {
+    "notFound": "Page not found",
+    "goHome": "Go to Home",
+    "somethingWrong": "Something went wrong"
+  }
+}

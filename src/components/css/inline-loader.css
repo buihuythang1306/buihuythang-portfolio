@@ -1,0 +1,34 @@
+.inline-loader {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inline-loader-small {
+  width: 16px;
+  height: 16px;
+}
+
+.inline-loader-medium {
+  width: 24px;
+  height: 24px;
+}
+
+.inline-loader-large {
+  width: 32px;
+  height: 32px;
+}
+
+.inline-spinner {
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--border-color);
+  border-top: 2px solid var(--brand-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

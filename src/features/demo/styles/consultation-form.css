@@ -1,0 +1,116 @@
+.consultation-form {
+  background: var(--card-bg);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px -1px var(--card-shadow);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.consultation-form-success {
+  background: var(--card-bg);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px -1px var(--card-shadow);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-header {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-section {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 1.5rem;
+}
+
+.form-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.consultation-form input,
+.consultation-form select,
+.consultation-form textarea {
+  font-family: var(--font-family-base);
+  transition: all 0.2s ease;
+}
+
+.consultation-form input:focus,
+.consultation-form select:focus,
+.consultation-form textarea:focus {
+  outline: none;
+}
+
+.consultation-form input::placeholder,
+.consultation-form textarea::placeholder {
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+.consultation-form select option {
+  background-color: var(--bg-default);
+  color: var(--text-main);
+}
+
+.form-actions {
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .consultation-form {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .consultation-form-success {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+}
+
+/* Checkbox styling */
+.consultation-form input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-default);
+}
+
+.consultation-form input[type="checkbox"]:checked {
+  background-color: var(--brand-primary);
+  border-color: var(--brand-primary);
+}
+
+/* Animation for success state */
+.consultation-form-success {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
