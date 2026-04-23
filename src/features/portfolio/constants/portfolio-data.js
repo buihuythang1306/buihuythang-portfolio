@@ -29,7 +29,7 @@ export const WORK_EXPERIENCE = [
   {
     company: "NAM VIET INFORMATION SYSTEMS CO., LTD.",
     position: "Full Stack Developer-Fresher",
-    period: "May 2025 - January 2026",
+    period: "May 2025 - Present",
     teamSize: "10 members",
     role: "Backend & Frontend Developer",
     projects: [
@@ -53,7 +53,7 @@ export const WORK_EXPERIENCE = [
   {
     company: "Công ty TNHH Công nghệ Kết nối Tâm Phúc",
     position: "Full Stack Developer-Intern",
-    period: "February 2025 - April 2025",
+    period: "September 2024 - April 2025",
     teamSize: "8 members",
     role: "Backend & Frontend Developer",
     projects: [
