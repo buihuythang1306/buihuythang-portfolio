@@ -2,6 +2,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  scroll-margin-top: 80px;
+}
+
 /* =========================================================================================
                                       VARIABLE CSS (ASA CALM PROFESSIONAL)
    ========================================================================================= */
@@ -20,8 +29,11 @@
   --brand-accent: #F8AC00;         /* Vàng cam ASA */
   /* BACKGROUND & TEXT */
   --bg-default: #ffffff;
+  --bg-default-rgb: 255, 255, 255;
   --bg-body: #F5F7FA;
+  --bg-body-rgb: 245, 247, 250;
   --bg-surface: #c8ddec;
+  --bg-surface-rgb: 200, 221, 236;
   --text-default: #000000;
   --text-main: #1E293B;
   --text-muted: #64748B;
@@ -59,8 +71,11 @@
 /*DARK MODE (ASA CALM)*/
 .dark {
   --bg-default: #0F172A;
+  --bg-default-rgb: 15, 23, 42;
   --bg-body: #111827;
+  --bg-body-rgb: 17, 24, 39;
   --bg-surface: #1E293B;
+  --bg-surface-rgb: 30, 41, 59;
   --text-default: #FFFFFF;
   --text-main: #F8FAFC;
   --text-muted: #94A3B8;
