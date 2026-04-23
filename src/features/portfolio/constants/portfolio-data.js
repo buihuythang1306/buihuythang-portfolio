@@ -98,6 +98,5 @@ export const CERTIFICATIONS = [
 
 export const ACHIEVEMENTS = [
   "Academic Encouragement Scholarship (twice)",
-  "Commendation for good and excellent achievements (2022-2023)",
-  "Reduced frontend development time by 30% through NPM UI Library"
+  "Commendation for good and excellent achievements (2022-2023)"
 ];

@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { useTheme } from "@/contexts/theme-context";
-import { NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { path } from "@/constants/path";
+import { useState, useEffect } from "react";
 import ThemeIcon from "@/contexts/theme-icon-context";
 import ButtonExample from "@/components/ui/button-example";
 import "@/components/css/main-layout.css";
@@ -9,9 +10,59 @@ import "@/components/css/main-layout.css";
 export default function MainLayout({ children }) {
   const { t, i18n } = useTranslation();
   const { isDarkMode, toggleTheme } = useTheme();
+  const location = useLocation();
+  const [activeSection, setActiveSection] = useState("about");
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
+  };
+
+  const isPortfolioPage = location.pathname === path.Home;
+
+  const portfolioSections = [
+    { id: "about", label: t("portfolio.sections.about") },
+    { id: "skills", label: t("portfolio.sections.skills") },
+    { id: "experience", label: t("portfolio.sections.experience") },
+    { id: "projects", label: t("portfolio.sections.projects") },
+    { id: "education", label: t("portfolio.sections.education") }
+  ];
+
+  useEffect(() => {
+    if (!isPortfolioPage) return;
+
+    const handleScroll = () => {
+      const sections = portfolioSections.map(section => ({
+        id: section.id,
+        element: document.getElementById(section.id)
+      }));
+
+      const scrollPosition = window.scrollY + 100;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        if (section.element && section.element.offsetTop <= scrollPosition) {
+          setActiveSection(section.id);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isPortfolioPage]);
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.offsetTop - offset;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
+    }
   };
 
   return (
@@ -23,35 +74,17 @@ export default function MainLayout({ children }) {
           </div>
           
           <nav className="header-nav">
-            <NavLink 
-              to={path.Home} 
-              className={({ isActive }) => 
-                `nav-link ${isActive ? 'nav-link-active' : ''}`
-              }
-            >
-              <ThemeIcon name="home" folder="home" className="nav-icon" />
-              {t("common.portfolio")}
-            </NavLink>
-            
-            <NavLink 
-              to={path.Demo} 
-              className={({ isActive }) => 
-                `nav-link ${isActive ? 'nav-link-active' : ''}`
-              }
-            >
-              <ThemeIcon name="info" folder="info" className="nav-icon" />
-              {t("common.demo")}
-            </NavLink>
-
-            <NavLink 
-              to={path.Info} 
-              className={({ isActive }) => 
-                `nav-link ${isActive ? 'nav-link-active' : ''}`
-              }
-            >
-              <ThemeIcon name="info" folder="info" className="nav-icon" />
-              {t("common.info")}
-            </NavLink>
+            {isPortfolioPage ? (
+              portfolioSections.map((section) => (
+                <button
+                  key={section.id}
+                  onClick={() => scrollToSection(section.id)}
+                  className={`nav-link ${activeSection === section.id ? 'nav-link-active' : ''}`}
+                >
+                  {section.label}
+                </button>
+              ))
+            ) : null}
           </nav>
           
           <div className="header-right">

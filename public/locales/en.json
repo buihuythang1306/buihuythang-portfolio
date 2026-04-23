@@ -19,6 +19,7 @@
     "contactMe": "Contact Me",
     "viewGithub": "View GitHub",
     "sections": {
+      "about": "About",
       "skills": "Technical Skills",
       "experience": "Work Experience",
       "projects": "Personal Projects",

@@ -14,7 +14,7 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section className="skills-section">
+    <section id="skills" className="skills-section">
       <div className="section-container">
         <h2 className="section-title">{t("portfolio.sections.skills")}</h2>
         

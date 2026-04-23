@@ -6,7 +6,7 @@ export default function EducationSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="education-section">
+    <section id="education" className="education-section">
       <div className="section-container">
         <h2 className="section-title">{t("portfolio.sections.education")}</h2>
         

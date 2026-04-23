@@ -6,7 +6,7 @@ export default function ExperienceSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="experience-section">
+    <section id="experience" className="experience-section">
       <div className="section-container">
         <h2 className="section-title">{t("portfolio.sections.experience")}</h2>
         

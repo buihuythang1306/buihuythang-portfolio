@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import ThemeIcon from "@/contexts/theme-icon-context";
 import ButtonExample from "@/components/ui/button-example";
 import { PERSONAL_INFO } from "../constants/portfolio-data";
+import avatarImage from "@/assets/Avarta.jpg";
 
 export default function HeroSection() {
   const { t } = useTranslation();
@@ -15,7 +16,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="hero-section">
+    <section id="about" className="hero-section">
       <div className="hero-container">
         <div className="hero-content">
           <div className="hero-text">
@@ -48,9 +49,11 @@ export default function HeroSection() {
 
           <div className="hero-avatar">
             <div className="avatar-container">
-              <div className="avatar-placeholder">
-                <ThemeIcon name="info" folder="info" className="avatar-icon" />
-              </div>
+              <img 
+                src={avatarImage} 
+                alt={t("portfolio.name")}
+                className="avatar-image"
+              />
             </div>
           </div>
         </div>
